@@ -3,13 +3,31 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "node server/server.js",
     "build": "next build",
     "start": "next start"
   },
   "dependencies": {
+    "argon2-ffi": "^1.2.0",
+    "connect-sqlite3": "^0.9.11",
+    "cookie-parser": "^1.4.5",
+    "express-session": "^1.17.1",
     "next": "9.4.4",
     "react": "16.13.1",
-    "react-dom": "16.13.1"
+    "react-dom": "16.13.1",
+    "sequelize": "^5.21.13",
+    "sequelize-cli": "^5.5.1"
+  },
+  "devDependencies": {
+    "@types/node": "^14.0.12",
+    "@types/react": "^16.9.35",
+    "argon2": "^0.26.2",
+    "bcrypt": "^5.0.0",
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "isomorphic-fetch": "^2.2.1",
+    "isomorphic-unfetch": "^3.0.0",
+    "sqlite3": "^4.2.0",
+    "typescript": "^3.9.5"
   }
 }

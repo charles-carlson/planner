@@ -1,0 +1,11 @@
+TODO for App:
+
+#Create basic skeleton
+    ## Interface to create TODOs
+    ## Save TODOs to database
+#User session
+    ##save cookie until logout
+    ##make sure session is active until cookie expires
+#History
+    ##user can look back at previous made TODOs
+    ##must use some component to render past TODOs
