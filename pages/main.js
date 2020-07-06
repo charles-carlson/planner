@@ -1,7 +1,18 @@
 import Head from 'next/head'
+import { useState } from 'react'
+import FormBox from '../components/formBox';
+import useFormBox from '../components/useFormBox';
+import '../css/main.module.css'
 
 export default function Main() {
-    
+    const {inView,toggle,todo,setTodo,handleSubmit} = useFormBox();
+    const [notes,setNote] = useState([{value: null}])
+
+    const handleChange = () =>{
+      const values = [...notes];
+      values.push({value:null})
+      setNote(values)
+    }
 
     const getCurrentDate = () =>{
         let currentDate = new Date();
@@ -9,15 +20,23 @@ export default function Main() {
     }
     const today = getCurrentDate();
     return (
-      <div>
-        <Head>
-          <title>Main</title>
-          <meta charSet="utf-8"/>
-          <meta name="viewport" content="initial-scale=1.0, width=device-width"/>
-        </Head>
+      <div className="App">
       <h1>TODO : {today}</h1>
         <div>
+            <button onClick={toggle}>Add + Div</button>
+            <FormBox
+              inView={inView}
+              hide={toggle}
+              todo = {todo}
+              setTodo = {setTodo}
+              handleSubmit = {handleSubmit}
+              />
         </div>
-      </div>
+        {notes.map((note,idx) => {
+          return (
+            <div key={idx}>Test</div>
+          )
+        })}
+        </div>
     )
   }

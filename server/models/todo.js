@@ -5,12 +5,6 @@ module.exports = (sequelize) => {
         tid:{
             type:DataTypes.INTEGER
         },
-        date:{
-            type:DataTypes.DATEONLY
-        },
-        time:{
-            type:DataTypes.TIME
-        },
         info:{
             type:DataTypes.TEXT
         }
