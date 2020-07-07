@@ -20,7 +20,7 @@ export default function Login(){
                     alert(data.message);
                     Router.push('/main');
                 }else{
-                    alert('Login failed, wrong username or password');
+                    alert(data.message);
                     setUsername('');
                     setPassword('');
                 }

@@ -1,5 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom';
+import '../css/main.module.css'
 const FormBox = ({inView,hide,setTodo,handleSubmit}) => inView ? ReactDOM.createPortal(
     <React.Fragment>
     <div className="form-overlay"/>
@@ -12,8 +13,8 @@ const FormBox = ({inView,hide,setTodo,handleSubmit}) => inView ? ReactDOM.create
             </div>
             <form onSubmit={handleSubmit}>
                 <label htmlFor="todo">Add a TODO</label>
-                <input type="text" id="todo" onChange={(e)=>setTodo(e.target.value)}></input>
-                <input type="submit">Submit</input>
+                <input type="text" id="todo" onChange={(e)=>setTodo(e.target.value)}/>
+                <input type="submit" value="Confirm" />
             </form>
         </div>
     </div>

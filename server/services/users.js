@@ -1,7 +1,7 @@
 var {User} = require('../db/sequelize')
 const { argon2i } = require('argon2-ffi');
 const crypto = require('crypto');
-
+var session = require("express-session"); 
 exports.addUser = async function(username,password){
     crypto.randomBytes(32,function(err,salt){
         if(err) throw err;
@@ -37,6 +37,7 @@ exports.loginUser = async function(username,password){
         .then(hash=>{
             if(hash == data[0].password){
                 console.log('User authenticated')
+                console.log(data[0].uid)
             }
             else{
                 throw Error('incorrect password or username')

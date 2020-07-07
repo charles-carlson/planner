@@ -1,18 +1,40 @@
 import Head from 'next/head'
-import { useState } from 'react'
+import { useState,useCallback } from 'react'
 import FormBox from '../components/formBox';
 import useFormBox from '../components/useFormBox';
-import '../css/main.module.css'
+
 
 export default function Main() {
-    const {inView,toggle,todo,setTodo,handleSubmit} = useFormBox();
     const [notes,setNote] = useState([{value: null}])
+    const [todo,setTodo] = useState('');
+    const {inView,toggle} = useFormBox();
 
-    const handleChange = () =>{
-      const values = [...notes];
-      values.push({value:null})
-      setNote(values)
-    }
+    const handleSubmit = useCallback((e) =>{
+      e.preventDefault();
+      fetch('http://localhost:3000/api/todo/addTodo',{
+          method: 'POST',
+          body:JSON.stringify({todo}),
+          headers:{
+              'Content-Type':'application/json'
+          }
+      })
+      .then(r=>r.json())
+      .then(data=>{
+          if(data.status == 200){
+              alert(data.message);
+              const values = [...notes];
+              values.push({value:todo})
+              console.log(todo)
+              setNote(values)
+          }
+          else{
+              console.log(data.message);
+          }
+      }).catch(err=>{
+          console.error(err);
+          throw err;
+      })
+  },[todo])
 
     const getCurrentDate = () =>{
         let currentDate = new Date();
@@ -34,7 +56,7 @@ export default function Main() {
         </div>
         {notes.map((note,idx) => {
           return (
-            <div key={idx}>Test</div>
+            <div key={idx}>{note.value}</div>
           )
         })}
         </div>
