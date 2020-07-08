@@ -52,7 +52,7 @@ export default function Login(){
 
                     <div>
                         <label htmlFor="lpassword">password: </label>
-                        <input type="text" id="lpassword" name="lpassword" onChange={(e)=>setPassword(e.target.value)}/>
+                        <input type="password" id="lpassword" name="lpassword" onChange={(e)=>setPassword(e.target.value)}/>
                     </div>
                     <div>
                         <input type='submit' value="Confirm"/>

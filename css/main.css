@@ -1,0 +1,25 @@
+.main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.indexButton{
+    background-color: #74caff;
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 20px;
+    height:30px;
+    width:100px;
+    border-radius: 5%;
+}
+.buttonWrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.textWrapper{
+    text-align: center;
+}

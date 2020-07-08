@@ -1,6 +1,5 @@
 import React from 'react'
 import ReactDOM from 'react-dom';
-import '../css/main.module.css'
 const FormBox = ({inView,hide,setTodo,handleSubmit}) => inView ? ReactDOM.createPortal(
     <React.Fragment>
     <div className="form-overlay"/>

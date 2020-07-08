@@ -43,31 +43,38 @@ export default function Signup(){
         Router.prefetch('/login')
     })
     return(
-        <div>
+        <div className="container">
             <Head>
             <title>Signup</title>
             <meta charSet="utf-8"/>
             <meta name="viewport" content="initial-scale=1.0, width=device-width"/>
             </Head>
-            <h1>Signup</h1>
-            <p>Create an account with a username and password</p>
-            <form onSubmit={handleSubmit}>
-                <div>
+            <div className="box">
+                <h1 className="textFont">Create an Account</h1>
+            </div>
+            <div>
+                <p className="textFont">Enter in a username and password</p>
+            </div>
+            <div>
+                <form onSubmit={handleSubmit}>
+                <div className="input-wrapper">
                     <label htmlFor="lusername">username: </label>
                     <input type="text" id="lusername" name="lusername" onChange={(e)=>setUsername(e.target.value)}/>
                 </div>
-                <div>
+                <div className="input-wrapper">
                     <label htmlFor='lpassword'>password:</label>
-                    <input type="text" id="lpassword" name="lpassword" onChange={(e)=>setPassword(e.target.value)}/>
+                    <input type="password" id="lpassword" name="lpassword" onChange={(e)=>setPassword(e.target.value)}/>
                 </div>
-                <div>
+                <div className="input-wrapper">
                     <label htmlFor='lconfirmpassword'> confirm password:</label>
-                    <input type="text" id="lconfirmpassword" name="lconfirmpassword" onChange={(e)=>setConfirm(e.target.value)}/>
+                    <input type="password" id="lconfirmpassword" name="lconfirmpassword" onChange={(e)=>setConfirm(e.target.value)}/>
                 </div>
-                <div>
+                <div className= "box">
                     <input type='submit' value="Confirm"/>
                 </div>
-            </form>
+                </form>
+            </div>
+
         </div>
     )
 }

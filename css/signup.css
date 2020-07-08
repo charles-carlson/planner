@@ -1,0 +1,57 @@
+input[type=submit]{
+    background-color: #74caff;
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 20px;
+    height:30px;
+    width:100px;
+    border-radius: 5%;
+    justify-content: center;
+    align-content: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.textFont{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: grey;
+}
+.container{
+    flex-direction: column;
+    border-color: #74caff;
+    border-width: medium;
+    border-radius: initial;
+    background: aliceblue;
+    border-style: solid;
+    width: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 500px;
+    margin: auto;
+}
+.box{
+    text-align: center;
+}
+input[type=text]{
+    height:20px;
+    width: 200px;
+    border-radius: 5%;
+    border-color:#74caff;
+    
+}
+input[type=password]{
+    height:20px;
+    width: 200px;
+    border-radius: 5%;
+    border-color:#74caff; 
+}
+input,label{
+    display: block;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: grey;
+}
+.input-wrapper{
+    margin:20px;
+}

@@ -35,7 +35,9 @@ export default function Main() {
           throw err;
       })
   },[todo])
-
+    const getRandomColor = () =>{
+      return Math.floor(Math.random()*16777215).toString(16);
+    }
     const getCurrentDate = () =>{
         let currentDate = new Date();
         return currentDate.toDateString();
