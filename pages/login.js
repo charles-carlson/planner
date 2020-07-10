@@ -34,27 +34,30 @@ export default function Login(){
             Router.prefetch('/main');
         })
         return(
-            <div>
+            <div className="container">
 
                 <Head>
                 <title>Login</title>
                 <meta charSet="utf-8"/>
                 <meta name="viewport" content="initial-scale=1.0, width=device-width"/>
                 </Head>
-
-                <h1>Login</h1>
-                <p>Please enter in your username and password</p>
+                <div className="box">
+                    <h1 className="textFont">Login</h1>
+                </div>
+                <div className="box">
+                    <p className="textFont">Please enter in your username and password</p>
+                </div>  
                 <form onSubmit={handleSubmit}>
-                    <div>
+                    <div className="input-wrapper">
                         <label htmlFor="lusername">username: </label>
                         <input type="text" id="lusername" name="lusername" onChange={(e)=>setUsername(e.target.value)}/>
                     </div>
 
-                    <div>
+                    <div className="input-wrapper">
                         <label htmlFor="lpassword">password: </label>
                         <input type="password" id="lpassword" name="lpassword" onChange={(e)=>setPassword(e.target.value)}/>
                     </div>
-                    <div>
+                    <div className="box">
                         <input type='submit' value="Confirm"/>
                     </div>
                 </form>

@@ -10,10 +10,16 @@ const FormBox = ({inView,hide,setTodo,handleSubmit}) => inView ? ReactDOM.create
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-            <form onSubmit={handleSubmit}>
-                <label htmlFor="todo">Add a TODO</label>
-                <input type="text" id="todo" onChange={(e)=>setTodo(e.target.value)}/>
-                <input type="submit" value="Confirm" />
+            <form className="form-box-center" onSubmit={handleSubmit}>
+                <div className="input-wrapper">
+                    <label htmlFor="todo">Add a TODO</label>
+                </div>
+                <div className="input-wrapper">
+                    <input type="text" id="todo" onChange={(e)=>setTodo(e.target.value)}/>
+                </div>
+                <div className="box">
+                    <input type="submit" value="Confirm" />
+                </div>    
             </form>
         </div>
     </div>

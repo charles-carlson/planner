@@ -2,7 +2,7 @@ import Head from 'next/head'
 import Link from 'next/link'
 export default function Home() {
   return (
-    <div className='main'>
+    <div className='container'>
       <Head>
         <title>Home</title>
         <meta charSet="utf-8"/>

@@ -2,6 +2,7 @@
     flex: 0;
     align-content: center;
     justify-content: center;
+    text-align: center;
   }
 .form-overlay {
     position: fixed;
@@ -50,4 +51,9 @@
     cursor: pointer;
     border: none;
   }
-  
+.form-box-center{
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;;
+}  

@@ -11,9 +11,12 @@
     text-decoration: none;
     display: inline-block;
     margin: 20px;
-    height:30px;
-    width:100px;
-    border-radius: 5%;
+    height:50px;
+    width:50px;
+    border-radius: 50%;
+    font-size: 24px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    outline-style: none;
 }
 .buttonWrapper{
     display: flex;
@@ -22,4 +25,6 @@
 }
 .textWrapper{
     text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: grey;
 }

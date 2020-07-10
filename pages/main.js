@@ -45,16 +45,21 @@ export default function Main() {
     const today = getCurrentDate();
     return (
       <div className="App">
-      <h1>TODO : {today}</h1>
+        <div >
+          <h1 className="textFont">TODO : {today}</h1>
+        </div>
+      
         <div>
-            <button onClick={toggle}>Add + Div</button>
-            <FormBox
-              inView={inView}
-              hide={toggle}
-              todo = {todo}
-              setTodo = {setTodo}
-              handleSubmit = {handleSubmit}
-              />
+          <div>
+            <button  className="indexButton" onClick={toggle}>+</button>
+          </div>
+          <FormBox
+            inView={inView}
+            hide={toggle}
+            todo = {todo}
+            setTodo = {setTodo}
+            handleSubmit = {handleSubmit}
+            />
         </div>
         {notes.map((note,idx) => {
           return (
