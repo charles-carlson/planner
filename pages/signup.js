@@ -12,7 +12,8 @@ export default function Signup(){
         if(confirmPw == password){
             fetch('http://localhost:3000/api/users/signup',{
                 method:'POST',
-                body:JSON.stringify({username,password}),
+                body:JSON.stringify({username:username,
+                                    password:password}),
                 headers:{
                     'Content-Type':'application/json'
                 }

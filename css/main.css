@@ -18,6 +18,21 @@
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     outline-style: none;
 }
+.homeButton{
+    background-color: #74caff;
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 20px;
+    height:30px;
+    width:100px;
+    border-radius: 5%;
+    justify-content: center;
+    align-content: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
 .buttonWrapper{
     display: flex;
     align-items: center;

@@ -21,9 +21,9 @@ app.prepare()
         server.use(session({
             store: new SQLiteStore,
             secret: 'supersecret',
-            resave: true,
-            saveUninitialized: true,
-            cookie:{ maxAge: 7*24*60*60*1000}
+            resave: false,
+            saveUninitialized: false,
+            cookie:{ maxAge: 7*24*60*60*1000,secure:false}
         }));
 
         server.get('*', (req,res)=>{

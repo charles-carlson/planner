@@ -37,7 +37,6 @@ exports.loginUser = async function(username,password){
         .then(hash=>{
             if(hash == data[0].password){
                 console.log('User authenticated')
-                console.log(data[0].uid)
             }
             else{
                 throw Error('incorrect password or username')

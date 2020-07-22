@@ -2,6 +2,7 @@ var {Todo,User} = require('../db/sequelize');
 const e = require('express');
 exports.addTodo = async function(username,todo){
     User.findAll({
+        attributes: ['uid'],
         where:{username:username},raw:true
     }).then(data=>{
         Todo.create({tid:data[0].uid,info:todo})

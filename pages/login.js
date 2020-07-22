@@ -9,7 +9,8 @@ export default function Login(){
             e.preventDefault();
             fetch('http://localhost:3000/api/users/login',{
                 method:'POST',
-                body:JSON.stringify({username,password}),
+                body:JSON.stringify({username:username,
+                                    password:password}),
                 headers:{
                     'Content-Type':'application/json'
                 }
@@ -18,7 +19,7 @@ export default function Login(){
             .then(data=>{
                 if(data.status == 200){
                     alert(data.message);
-                    Router.push('/main');
+                    Router.push({pathname:'/main',query:{name:username}});
                 }else{
                     alert(data.message);
                     setUsername('');
@@ -47,7 +48,7 @@ export default function Login(){
                 <div className="box">
                     <p className="textFont">Please enter in your username and password</p>
                 </div>  
-                <form onSubmit={handleSubmit}>
+                <form  onSubmit={handleSubmit}>
                     <div className="input-wrapper">
                         <label htmlFor="lusername">username: </label>
                         <input type="text" id="lusername" name="lusername" onChange={(e)=>setUsername(e.target.value)}/>

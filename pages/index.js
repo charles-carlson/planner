@@ -16,10 +16,10 @@ export default function Home() {
         </div>
         <div className="buttonWrapper">
           <Link href="/signup">
-            <button className="indexButton">Sign Up</button>
+            <button className="homeButton">Sign Up</button>
           </Link>
           <Link href="/login">
-            <button className="indexButton">Login</button>
+            <button className="homeButton">Login</button>
           </Link>
         </div> 
         </div>

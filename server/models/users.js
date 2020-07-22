@@ -1,11 +1,14 @@
-const {DataTypes} = require('sequelize')
+const {DataTypes} = require('sequelize');
+const crypto = require('crypto');
 
 module.exports = (sequelize) =>{
     return sequelize.define('user',{
         uid:{
-            type:DataTypes.INTEGER,
-            primaryKey: true,
-            autoIncrement: true
+            type:DataTypes.UUID,
+            defaultValue: function(){
+                return crypto.randomBytes(16).toString('hex');
+            },
+            primaryKey: true
         },
         username:{
             type:DataTypes.TEXT,
